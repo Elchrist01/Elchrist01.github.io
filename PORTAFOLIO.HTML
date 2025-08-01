@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BLOG</title>
+<link href="CSS/PORTAFOLIO.CSS" rel="stylesheet" type="text/css">
+</head>
+	
+<body>
+		
+	<header class="header">
+		<div class="logo">
+			<img src="IMG/flogo-05.png" alt="logo de la marca">
+		</div>
+		
+	<nav class="navbar">
+        
+        <ul class="nav-links">
+            <li><a href="INDEX.html">Inicio</a></li>
+			<li><a href="INDEX.html#tres">Servicios</a></li>
+            <li><a href="#">Portafolio</a></li>
+            <li><a href="BLOG.HTML">Blog</a></li>
+        </ul>
+    </nav>
+		
+		<a  class="btn" href="INDEX.html#cuatro"><button>Conversemos</button></a>
+		<a href="#" class="menu" onclick="openNav(event)"><button>Menu</button></a>
+
+
+		<div class="overlay" id="mobile-menu">
+			<a href="javascript:void(0)" class="close" onclick="closeNav(event)">&times;</a>
+
+			<div class="overlay-content">
+				<a href="INDEX.html">Inicio</a>
+				<a href="INDEX.html#tres">Servicios</a>
+				<a href="#">Portafolio</a>
+				<a href="BLOG.HTML">Blog</a>
+				<a href="INDEX.html#cuatro">Conversemos</a>
+				</div>
+			</div>
+		
+</header>	
+	<main>
+		<div id="cont">
+		
+			<img class="img_principal" alt="portafolio" src="IMG/portafolio.jpg">
+			
+			<div class="flotante">
+				<div id="enc_prinBienvenido">
+					<h1>PORTAFOLIO&nbsp;</h1>
+			 </div>
+				
+			</div>
+			
+		</div>
+		<section id="portafolio">
+    <div class="container">
+        
+        <div class="services-grid">
+            <a href="#marketing" class="service-item">
+                <img src="IMG/fractal-1069201_1920.jpg" alt="Estrategia de Marketing">
+                <div class="service-text">Branding</div>
+            </a>
+            <a href="#diseno" class="service-item">
+                <img src="IMG/audiov.jpg" alt="Creatividad y Diseño">
+                <div class="service-text">Produccion aundioVisual</div>
+            </a>
+            <a href="#marketing-digital" class="service-item">
+                <img src="IMG/desarrolo.jpg" alt="Marketing Digital">
+                <div class="service-text">Desarrollo web</div>
+            </a>
+            <a href="#produccion" class="service-item">
+                <img src="IMG/pexels-divinetechygirl-1181346.jpg" alt="Producción de Medios">
+                <div class="service-text">Marketings</div>
+            </a>
+            <a href="#social-media" class="service-item">
+                <img src="IMG/gention de redes.jpg" alt="Gestión de Redes Sociales">
+                <div class="service-text">Gestión de Redes Sociales</div>
+            </a>
+            <a href="#relaciones-publicas" class="service-item">
+                <img src="IMG/reuniones-de-trabajo-efectivas.jpg" alt="Relaciones Públicas">
+                <div class="service-text">Relaciones Públicas</div>
+            </a>
+        </div>
+    </div>
+</section>
+		<section id="testimonios">
+    <h2>Testimonios de nuestros clientes</h2>
+    <div class="carrusel-container">
+        <button class="carrusel-arrow left-arrow" onclick="moverCarrusel(-1)">&#9664;</button>
+        
+        <div class="testimonios-carrusel">
+			
+            <div class="testimonio-card">
+                <p>"Excelente servicio, muy profesional y rápido. ¡Totalmente recomendados!"</p>
+                <div class="cliente-info">
+                    <strong>Juan Pérez</strong>
+                    <span>CEO de Empresa X</span>
+                </div>
+            </div>
+            <div class="testimonio-card">
+                <p>"Trabajar con este equipo fue una experiencia increíble. Superaron nuestras expectativas."</p>
+                <div class="cliente-info">
+                    <strong>María García</strong>
+                    <span>Directora de Marketing</span>
+                </div>
+            </div>
+            <div class="testimonio-card">
+                <p>"Logramos excelentes resultados gracias a su dedicación y experiencia."</p>
+                <div class="cliente-info">
+                    <strong>Carlos Ruiz</strong>
+                    <span>Fundador de Startup Y</span>
+                </div>
+            </div>
+			<div class="testimonio-card">
+                <p>"Serendipia ha superado nuestras expectativas. Los resultados han sido increíbles y el equipo es muy profesional."</p>
+                <div class="cliente-info">
+                    <strong>Meliza Kluk</strong>
+                    <span>Directora de Ventas</span>
+                </div>
+            </div>
+            <div class="testimonio-card">
+                <p>"Estamos muy satisfechos con el trabajo realizado. Nos ayudaron a alcanzar nuestros objetivos con una creatividad única."</p>
+                <div class="cliente-info">
+                    <strong>Tania Harebalo</strong>
+                    <span>Directora de Marketing, Compañía ABC</span>
+                </div>
+            </div>
+            <!-- Añade más testimonios aquí si es necesario -->
+        </div>
+        
+        <button class="carrusel-arrow right-arrow" onclick="moverCarrusel(1)">&#9654;</button>
+    </div>
+</section>
+
+
+
+	</main>
+
+		
+	
+	<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="IMG/Recurso 2.png" alt="Logo de Serendipia" class="logo-enc-prin2">
+        </div>
+
+        <div class="footer-column">
+            <h3>Enlaces</h3>
+            <ul>
+                <li><a href="#">Portafolio</a></li>
+                <li><a href="INDEX.html#tres">Servicios</a></li>
+                <li><a href="BLOG.HTML">Blog</a></li>
+                <li><a href="#">Testimonios</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            
+            <ul>
+                <li><strong>Dirección:</strong> Av. Siempre Viva 742</li>
+                <li><strong>Whatsapp:</strong> (+51) 999 888 777</li>
+                <li><strong>Email:</strong> diseño_digital@serendipia.pe</li>
+                <li>publicidad@serendipia.pe</li>
+                <li>ventas@serendipia.pe</li>
+                <!-- Agregar los íconos de redes sociales -->
+                <li class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/51999888777" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">   
+        <p>&copy; 2024 Serendipia. Todos los derechos reservados.</p>
+    </div>
+		
+</footer>
+
+	
+	<script type="text/javascript" src="JAVA/NAV.js"></script>
+
+	
+</body>
+</html>

@@ -1,0 +1,429 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: "Nunito", system-ui;
+	font-size: 20px;
+}
+body {
+    width: 100%;  /* Adaptable a cualquier pantalla */
+    margin: 0 auto;
+    background-color: #04171b ;
+	overflow-x: hidden;
+}
+
+.header {
+    background-color: rgba(4, 23, 27, 0.87); /* Fondo negro con 87% de opacidad */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 88px;
+    padding: 5px 1%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/*logo*/
+.header .logo{
+	
+	cursor: pointer;
+	margin-right: auto;
+}
+
+.header .logo img{
+	
+	height: 65px;
+	width: auto;
+	transition: all 0.3s;
+	filter: brightness(125%);
+	
+}
+
+.header .logo img:hover{
+	
+	transform: scale(1.05);
+}
+/*letras del nav*/
+.header .nav-links{
+	
+	list-style: none;
+}
+
+.header .nav-links li{
+	
+	display: inline-block;
+	padding: 0 20px;
+}
+
+.header .nav-links li:hover,
+.overlay a:hover{
+	
+	transform: scale(1.1);
+}
+
+.header .nav-links a {
+    font-weight: 700;  /* Cambia el grosor de la fuente */
+    font-size: 18px;  /* Ajusta el tamaño del texto */
+    color: white;
+}
+
+
+.header .nav-links li a:hover{
+	
+	color: #FFBC0E
+}
+
+.menu{
+	display: none;
+}
+
+.header .btn button,
+.header .menu button{
+	margin-left: 20px;
+	font-weight: 700;
+	color: #1B3039;
+	padding: 9px 25px;
+	background: aqua;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	
+	
+}
+
+.header .btn button:hover,
+.header .menu button:hover{
+	
+	background-color: #e2f1f8;
+	color: #FFBC0E;
+	transform: scale(1.1);
+}
+
+@media screen and (max-width: 800px) {
+	.nav-links, .btn {
+		display: none;
+	}
+	.menu {
+		display: inherit;	}
+}
+
+/*Nav*/
+.header a{
+	text-decoration: none
+}
+
+/* Estilo del overlay cuando el menú está abierto */
+.header .overlay {
+    height: 100%;
+    width: 0; /* Por defecto está cerrado */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(33,49,63,.95); /* Fondo oscuro semitransparente */
+    overflow-x: hidden;
+    transition: width 0.5s ease; /* Transición suave al abrir/cerrar */
+}
+
+/* El contenido del menú */
+.header .overlay .overlay-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Enlaces del menú móvil */
+.header .overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    font-weight: 700;
+    color: #eceff1;
+    transition: all 0.3s ease 0s;
+}
+
+/* Botón de cerrar */
+.header .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+
+@media screen and (max-height:450px){
+	.header .overlaya{
+		font-size: 20px;
+		top: 15px;
+		
+		
+	}
+	.header .overlay .close{
+		font-size: 40px;
+		top: 15px;
+		right: 35px;
+		
+		
+	}
+}
+
+
+/*Bienvenido*/
+#cont {
+	
+	position:relative;
+	
+}
+#enc_prinBlog h1 {
+    width: auto;
+    color: white;
+    font-family: Bahnschrift;
+    font-size: 160px;
+}
+#enc_prinBlog h5{
+	justify-content: center;
+}
+
+.img_principal {
+    width: 100%;
+    height: 500px; 
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+	filter: brightness(60%);
+}
+
+
+@media (max-width: 768px) {
+    .img_pincipal{
+        width: 50%;  /* Reducir tamaño en pantallas pequeñas */
+        left: 25%;
+    }
+}
+.flotante {
+	position:absolute;
+	width:100%;
+	height:150px;
+	top:25%;
+	left:40%
+}
+@media (max-width: 768px) {
+    .flotante {
+        left: 20%; /* Ajuste para pantallas pequeñas */
+    }
+}
+
+/*seccion*/
+/* Sección principal del blog */
+#uno {
+    padding: 40px 20px;
+    background-color: #04171b;
+    display: flex;
+    justify-content: center;
+}
+
+.cont_Blog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    padding: 20px; /* Añadir espacio alrededor */
+    justify-content: center;
+}
+
+/* Caja del blog */
+.blog-box {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(50% - 10px); /* Tamaño para que quepan dos elementos por fila */
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+
+/* Imagen del blog */
+.blog-imagen {
+    position: relative;
+}
+
+.img_blog {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Texto dentro del blog */
+.blog-text {
+    padding: 20px;
+    background-color: rgba(16, 199, 163, 0.5);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+
+.blog-text h2 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Descripción del artículo */
+.blog-box p {
+    padding: 20px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .blog-box {
+        width: 100%; /* Toma todo el ancho en pantallas pequeñas */
+    }
+}
+/* Botón de "Leer artículo" */
+.btn-read {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFBC0E; /* Color amarillo */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 15px 20px; /* Espaciado dentro de la tarjeta */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-read:hover {
+    background-color: #e2a90d; /* Color más oscuro en hover */
+    transform: scale(1.05); /* Efecto de escala */
+}
+
+
+  /*Footer*/
+/* Estilos generales del footer */
+footer {
+    background-color: #1b3039;
+    color: white;
+    padding: 40px 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Para separar las columnas */
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* Logo en el footer */
+.footer-logo {
+    flex: 1;
+    margin: 10px 0;
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-logo img {
+    max-width: 150px;  /* Tamaño máximo para el logo */
+}
+
+/* Columnas del footer */
+.footer-column {
+    flex: 1;
+    margin: 10px 20px;
+    min-width: 250px;  /* Tamaño mínimo ajustado */
+}
+
+.footer-column h3 {
+    color: #ffbc0e;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: aqua;
+}
+
+/* Estilo de los íconos de redes sociales */
+.footer-column .social-icons {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.footer-column .social-icons li {
+    margin-right: 15px;
+}
+
+.footer-column .social-icons a {
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-column .social-icons a:hover {
+    color: #ffbc0e; /* Color cuando el usuario pasa el cursor */
+}
+
+/* Información del pie */
+.footer-bottom {
+    background-color: #162229;
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+    font-size: 14px;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer-container {
+        display: flex;
+        flex-direction: column; /* Organiza las columnas en una sola columna */
+        align-items: center;  /* Centra los elementos en pantallas pequeñas */
+        padding: 40px;
+    }
+
+    .footer-column, .footer-logo {
+        flex: 1;
+        margin: 10px 0;
+        min-width: 250px;
+        text-align: center; /* Centra el contenido de las columnas */
+    }
+
+    .footer-column .social-icons {
+        justify-content: center;
+    }
+}
+
